@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+欢迎教师;<span th:text="${user.name}"></span>
+    <br/>
+头像：<img th:src="'upload/'+@{${user.photoFile.originalFilename}}">
+<br/>
+<a th:href="@{/downLoad(filename=${user.photoFile.originalFilename})}">下载该头像</a>
+</body>
+</html>
